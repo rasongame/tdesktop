@@ -60,20 +60,23 @@ base::unique_qptr<Ui::PopupMenu> FillContextMenu(
 void CopyPostLink(
 	not_null<Window::SessionController*> controller,
 	FullMsgId itemId,
-	Context context);
+	Context context,
+	std::optional<TimeId> videoTimestamp = {});
 void CopyPostLink(
 	std::shared_ptr<Main::SessionShow> show,
 	FullMsgId itemId,
-	Context context);
+	Context context,
+	std::optional<TimeId> videoTimestamp = {});
+void CopyStoryLink(
+	std::shared_ptr<Main::SessionShow> show,
+	FullStoryId storyId);
+
 void ViewAsJSON(
 	not_null<Window::SessionController*> controller,
 	FullMsgId itemId);
 void ViewAsJSON(
 	std::shared_ptr<Main::SessionShow> show,
 	FullMsgId itemId);
-void CopyStoryLink(
-	std::shared_ptr<Main::SessionShow> show,
-	FullStoryId storyId);
 void AddPollActions(
 	not_null<Ui::PopupMenu*> menu,
 	not_null<PollData*> poll,
