@@ -40,7 +40,7 @@ jobs:
 
   macos:
     name: MacOS
-    runs-on: macos-15-arm64
+    runs-on: macos-15
 
     strategy:
       matrix:
