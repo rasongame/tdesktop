@@ -70,16 +70,16 @@ jobs:
           brew install automake meson nasm ninja pkg-config
 
           # new clang
-          brew install llvm@19
+          brew install llvm@16
           
           # Disable spotlight.
           sudo mdutil -a -i off
 
           sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
-      - name: Set up Clang 19
+      - name: Set up Clang 16
         run: |
-          echo "CC=clang-19" >> $GITHUB_ENV
-          echo "CXX=clang++-19" >> $GITHUB_ENV
+          echo "CC=clang-16" >> $GITHUB_ENV
+          echo "CXX=clang++-16" >> $GITHUB_ENV
       
       - name: ThirdParty cache.
         id: cache-third-party
